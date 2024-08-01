@@ -1,0 +1,51 @@
+@import url(https://fonts.googleapis.com/css?family=Lexend:100,200,300,regular,500,600,700,800,900);
+
+*{
+  font-family: Lexend;
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  user-select: none;
+}
+
+:root{
+  --transition:all .4s;
+  --bgColor:#16151C;
+  --textColor:#fff;
+  --secColor:#2080F4;
+  --textColorLight:#b5b5b5;
+  --panelColor:#1D1C23;
+  --panelHoverColor:#211F2D;
+  --borderColor-1:#323138;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+/* Responsive */
+/* Tablet */
+@media screen and (max-width:999px) {
+  
+}
+/* Mobiles */
+@media screen and (max-width:599px) {
+  
+}
+/* End Responsiveness */
+
+/* Animations */
+@keyframes animateLoader {
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}

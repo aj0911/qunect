@@ -1,0 +1,196 @@
+.Auth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--bgColor);
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  .left {
+    width: 100%;
+    padding: 20px 5%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    transition: var(--transition);
+    .logo {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0.5rem;
+      img {
+        width: 40px;
+        height: 40px;
+      }
+      h3 {
+        font-size: 1.1rem;
+        color: var(--textColor);
+        font-weight: 500;
+      }
+    }
+    form {
+      width: 50%;
+      align-self: center;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      border: 1px solid var(--borderColor-1);
+      padding: 20px;
+      border-radius: 10px;
+      gap: 2rem;
+      .content {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        flex-direction: column;
+        h3 {
+          font-size: 2.5rem;
+          font-weight: 700;
+          color: var(--textColor);
+        }
+        p {
+          font-size: 0.9rem;
+          font-weight: 400;
+          color: var(--textColorLight);
+        }
+      }
+      .form-input {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        flex-direction: column;
+        gap: 0.5rem;
+        label {
+          font-size: 1.1rem;
+          color: var(--textColor);
+          font-weight: 500;
+        }
+        input {
+          font-size: 1.1rem;
+          padding: 10px;
+          border: 1px solid var(--borderColor-1);
+          color: var(--textColor);
+          background-color: var(--bgColor);
+          border-radius: 5px;
+          width: 100%;
+          font-weight: 400;
+        }
+        input:focus{
+            outline-width: 0;
+        }
+        
+      }
+      input[type="submit"]{
+        color: #fff;
+        background-color: var(--secColor);
+        border: 2px solid var(--secColor);
+        width: 100%;
+        padding: 10px 20px;
+        font-size: 1.1rem;
+        transition: var(--transition);
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      input[type="submit"]:hover{
+        color: var(--secColor);
+        background-color: transparent;
+      }
+      >p {
+        color: var(--textColor);
+        font-weight: 300;
+        font-size: 0.9rem;
+        width: 100%;
+        text-align: center;
+        margin-top: -1rem;
+        transition: var(--transition);
+        cursor: pointer;
+      }
+      >p:hover{
+        color: var(--secColor);
+      }
+    }
+    > p {
+      color: var(--textColorLight);
+      font-weight: 300;
+      font-size: 0.8rem;
+      width: 100%;
+    }
+  }
+}
+
+
+
+/* Responsive */
+/* Tablet */
+@media screen and (max-width:999px) {
+  .Auth{
+    .left{
+        width: 100%;
+        >p{
+            text-align: center;
+        }
+        form{
+          width: 100%;
+        }
+    }
+    .right{
+        display: none;
+    }
+  }
+}
+/* Mobiles */
+@media screen and (max-width:599px) {
+  .Auth{
+    .left{
+        .logo{
+            img{
+                width: 30px;
+                height: 30px;
+            }
+            h3{
+                font-size: 1rem;
+            }
+        }
+        form{
+            .content{
+                h3{
+                    font-size: 1.8rem;
+                }
+                p{
+                    font-size: .8rem;
+                }
+            }
+            .form-input{
+                label{
+                    font-size: .9rem;
+                }
+                input{
+                    font-size: .9rem;
+                    padding: 7px;
+                    border-radius: 3px;
+                }
+            }
+            input[type="submit"]{
+                font-size: .9rem;
+                padding: 7px 15px;
+                border-radius: 3px;
+            }
+            >p{
+                font-size: .8rem;
+            }
+        }
+        >p{
+            font-size: .7rem;
+        }
+    }
+  }
+}
+/* End Responsiveness */
